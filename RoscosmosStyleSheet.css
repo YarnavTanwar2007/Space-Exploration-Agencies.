@@ -1,0 +1,308 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+  
+::-webkit-scrollbar-track {
+    background-color: #000;
+    opacity: 0;
+}
+   
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 128, 139, 1); 
+    border-radius: 10px;
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: aliceblue; 
+}
+
+.container {
+    z-index: -2;
+    min-height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(Images/RUSSIABackground.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    padding: auto;
+    position: static;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.overlay img {
+    top: -10%;
+    width: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    position: fixed;
+    opacity: 0.2;
+    pointer-events: none;
+}
+
+.navbar {
+    width: 90%;
+    background-color: transparent;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    display: flex;
+    position: relative;
+    align-items: center;
+    font-size: 18px;
+    padding: 10px 50px;
+    position: relative;
+}
+
+.navbar ul li {
+    align-items: center;
+    list-style: none;
+    display: inline-block;
+    padding: 10px 47.5px;
+    background-color: transparent;
+    position: relative;
+}
+
+.navbar ul li img {
+    position: absolute;
+    width: 25px;
+    margin: auto;
+    bottom: 12px;
+    opacity: 0;
+    left: 10%;
+    pointer-events: none;
+    transition: opacity .5s;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.navbar ul li:hover .FLAGhome {
+    opacity: 1;
+}
+
+.navbar ul li::after {
+    content: '';
+    height: 100%;
+    width: 5px;
+    position: absolute;
+    background-color: rgba(0, 128, 139, 1);
+    left: 40px;
+    bottom: 0;
+    opacity: 0;
+    transform: rotate(0deg);
+    transition: 0.25s;
+}
+
+.navbar ul li:nth-child(1)::after {
+    left: 75px;
+}
+
+.navbar ul li:nth-child(6)::after {
+    left: 40px;
+} 
+
+.navbar ul li:hover:after {
+    opacity: 1;
+    transform: translateX(-40px);
+}
+
+.navbar ul li:hover .FLAGhome {
+    opacity: 1;
+}
+
+.navbar ul li:nth-child(6):after {    
+    opacity: 1;
+    transform: translateX(-40px);
+}
+
+.opening-content-ROSCOSMOS {
+    top: 20%;
+    left: 0;
+    font-size: 25px;
+    margin-left: 20px;
+    width: 55%;
+    color: aliceblue;
+    position: fixed;
+    display: flex;
+    z-index: 1;
+}
+
+.opening-content-ROSCOSMOS span {
+    font-size: 80px;
+    letter-spacing: 8px;
+    color: rgba(0, 128, 139, 1);
+}
+
+.opening-content-ROSCOSMOS img {
+    position: fixed;
+    top: 20%;
+    right: 0;
+    height: 400px;
+    width: 40%;
+    pointer-events: none;
+}
+
+.opening-content-ROSCOSMOS p {
+    width: 50%;
+    text-align: justify;
+    line-height: 30px;
+    left: 20px;
+    position: fixed;
+    color: aliceblue;
+    font-size: 20px;
+    transition: transform 1s;
+}
+
+.opening-content-ROSCOSMOS p:hover {
+    transform: scale(1.02);
+}
+
+.scroll-arrow {
+    width: 40px;
+    height: 40px;
+    border-radius: 25px;
+    border: aliceblue 2px solid;
+    justify-content: center;
+    bottom: 0;
+    position: fixed;
+    bottom: 5%;
+    left: 50%;
+    z-index: 0;
+}
+
+.ImgArrow:hover {
+    animation: arrow 2s infinite;
+}
+
+@keyframes arrow {
+    0% {margin-top: 0;}
+    50% {margin-top: -2px;}
+    100% {margin-top: 2px;}
+}
+
+.content-ROSCOSMOS {
+    background-color: rgba(0, 128, 139, 1);
+    height: 4200px;
+    position: relative;
+    justify-content: center;
+    border-top: aliceblue 1vh solid;
+    box-shadow: 0 0 70px 30px #000;
+    top: 0;
+    z-index: 2;
+    text-align: justify;
+}
+
+.content-ROSCOSMOS h1 {
+    color: aliceblue;
+    margin-bottom: 20px;
+    transition: transform .5s;
+    text-align: left;
+    width: 40%;
+}
+
+.content-ROSCOSMOS h1:hover {
+    transform: translatey(5px);
+}
+
+.ROSCOSMOS-content-text {
+    margin: 75px 30px auto;
+    position: absolute;
+    color: #000;
+}
+
+.facilityList ul li {
+    list-style-type: decimal;
+    background-color: transparent;
+    left: 20px;
+    margin: 20px 40px;
+}
+
+.facilityList span {
+    font-size: 27px;
+    color: aliceblue;
+}
+
+footer {
+    border-top: rgba(0, 128, 139, 1) solid 5px;
+    padding: 10px;
+    width: 100%;
+    font-size: 20px;
+    background-color: #000;
+    color: aliceblue;
+    bottom: 0;
+    position: absolute;
+}
+
+.footerImg {
+    padding: 0 20px;
+    left: 50vh;
+    width: 20%;
+    margin: 1% 40% 0;
+    justify-content: space-between;
+    display: flex;
+    padding: 10px;
+    border-top: 2px rgba(0, 128, 139, 1) solid;
+    border-bottom: 2px rgba(0, 128, 139, 1) solid;
+    cursor: pointer;
+}
+
+footer img {
+    height: 20px;
+    width: 20px;
+    transition: transform .3s;
+}
+
+footer img:hover {
+    transform: scale(1.5);
+}
+
+footer ul {
+    list-style: none;
+    display: inline-block;
+    width: 20%;
+}
+
+footer ul li {
+    padding: 10px 30px 10px;
+    color: rgba(0, 128, 139, 1);
+    opacity: 1;
+    transition: .4s;
+}
+
+footer ul a {
+    text-decoration: none;
+}
+
+footer ul li:hover {
+    color: aliceblue;
+}
+
+.button-footer {
+    color: aliceblue;
+    margin: 20px;
+    position: relative;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 54px;
+    padding: 0;
+    border: 3px rgba(0, 128, 139, 1) solid;
+    transition: .25s;
+}
+
+.button-footer:hover {
+    background-color: rgba(0, 128, 139, 1);
+    color: #000;
+}

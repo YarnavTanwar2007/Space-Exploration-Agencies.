@@ -1,0 +1,344 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+  
+::-webkit-scrollbar-track {
+    background-color: #000;
+    opacity: 0;
+}
+   
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 128, 139, 1); 
+    border-radius: 10px;
+}
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: aliceblue; 
+}
+
+.container {
+    min-height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)), url(Images/MoonWallpaper.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    padding: auto;
+    position: static;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.navbar {
+    width: 90%;
+    background-color: transparent;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    display: flex;
+    position: relative;
+    align-items: center;
+    font-size: 18px;
+    padding: 10px 50px;
+    position: relative;
+}
+
+.navbar ul li {
+    align-items: center;
+    list-style: none;
+    display: inline-block;
+    padding: 10px 47.5px;
+    background-color: transparent;
+    position: relative;
+}
+
+.navbar ul li img {
+    position: absolute;
+    width: 25px;
+    margin: auto;
+    bottom: 12px;
+    opacity: 0;
+    left: 10%;
+    pointer-events: none;
+    transition: opacity .5s;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.navbar ul li::after {
+    content: '';
+    height: 100%;
+    width: 5px;
+    position: absolute;
+    background-color: rgba(0, 128, 139, 1);
+    left: 40px;
+    bottom: 0;
+    opacity: 0;
+    transition: 0.25s;
+}
+
+.navbar ul li:nth-child(1)::after {
+    left: 75px;
+    opacity: 1;
+    transform: translateX(-40px);
+} 
+
+.navbar ul li:hover:after {
+    opacity: 1;
+    transform: translateX(-40px);
+}
+
+.navbar ul li:hover .FLAGhome {
+    opacity: 1;
+}
+
+.opening-content-home {
+    color: aliceblue; 
+    margin-left: 20px; 
+    top: 25%;
+    position: fixed;
+}
+
+.opening-content-home h1 {
+    width: 100%;
+    font-size: 100px;
+    margin-bottom: 20px;
+    line-height: 120px;
+    color: rgba(0, 128, 139, 1);
+}
+
+.opening-content-home p {
+    width: 47%;
+    line-height: 27px;
+    transition: transform 1s;
+}
+
+.opening-content-home p:hover {
+    transform: scale(1.02);
+}
+
+.opening-content-home span {
+    color: rgba(0, 128, 139, 1);
+}
+
+.quote {
+    text-align: right;
+    color: aliceblue;
+    width: 30%;
+    position: fixed;
+    margin-left: 65%;
+    top: 29vh;
+    line-height: 50px;
+    transition: transform .5s;
+}
+
+.quote:hover {
+    transform: scale(1.1);
+}
+
+.quote span {
+    font-size: 50px;
+    color: rgba(0, 128, 139, 1);
+}
+
+.quote h3 {
+    color: rgba(0, 128, 139, 1);
+}
+
+.scroll-arrow {
+    width: 40px;
+    height: 40px;
+    border-radius: 25px;
+    border: aliceblue 2px solid;
+    justify-content: center;
+    bottom: 0;
+    position: fixed;
+    bottom: 5%;
+    left: 50%;
+    padding: auto;
+    z-index: 0;
+}
+
+.ImgArrow:hover {
+    animation: arrow 2s infinite;
+}
+
+@keyframes arrow {
+    0% {margin-top: 0;}
+    50% {margin-top: -2px;}
+    100% {margin-top: 2px;}
+}
+
+.content-home {
+    background-color:  aliceblue;
+    position: relative;
+    justify-content: center;
+    border-top: rgba(0, 128, 139, 1) 1vh solid;
+    box-shadow: 0 0 70px 60px #000;
+    top: 0;
+    z-index: 2;
+    text-align: justify;
+    min-height: 6300px;
+}
+
+.content-home h1 {
+    color: rgba(0, 128, 139, 1);
+    margin-bottom: 20px;
+    transition: transform .5s;
+    text-align: left;
+    width: 40%;
+}
+
+.content-home h1:hover {
+    transform: translateY(5px);
+}
+
+.history-of-space-race {
+    margin: 75px 30px auto;
+    position: absolute;
+}
+
+.history-of-space-race ul li {
+    list-style: none;
+    background-color: transparent;
+    left: 20px;
+    margin: 70px 40px;
+}
+
+.history-of-space-race span {
+    color: rgba(0, 128, 139, 1);
+    font-size: 27px;
+}
+
+.history-of-space-race ul li::after {
+    content: '';
+    height: 50px;
+    width: 3px;
+    position: absolute;
+    margin-top: 30px;
+    left: 35px;
+    background-color: rgba(0, 128, 139, 1);
+}
+
+.history-of-space-race ul li:nth-child(24)::after {
+    width: 0;
+    height: 0;
+}
+
+.effects-of-cold-war ul li {
+    list-style-type: decimal;
+}
+
+.effects-of-cold-war ul li::after {
+    height: 0;
+    width: 0;
+}
+
+.videos ul {
+    position: relative;
+    width: 100%;
+}
+
+.videos ul {
+    margin-left: -40px;
+}
+
+.videos ul li::after {
+    height: 0;
+    width: 0;
+}
+
+.videos span {
+    background-color: rgba(0, 128, 139, 1);
+    color: aliceblue;
+    width: 100%;
+    padding: 0 2px;
+}
+
+
+
+footer {
+    border-top: rgba(0, 128, 139, 1) solid 5px;
+    padding: 10px;
+    width: 100%;
+    font-size: 20px;
+    background-color: #000;
+    color: aliceblue;
+    bottom: 0;
+    position: relative;
+    z-index: 3;
+}
+
+.footerImg {
+    padding: 0 20px;
+    left: 50vh;
+    width: 20%;
+    margin: 1% 40% 0;
+    justify-content: space-between;
+    display: flex;
+    padding: 10px;
+    border-top: 2px rgba(0, 128, 139, 1) solid;
+    border-bottom: 2px rgba(0, 128, 139, 1) solid;
+    cursor: pointer;
+}
+
+footer img {
+    height: 20px;
+    width: 20px;
+    transition: transform .3s;
+}
+
+footer img:hover {
+    transform: scale(1.5);
+}
+
+footer ul {
+    list-style: none;
+    display: inline-block;
+    width: 20%;
+}
+
+footer ul li {
+    padding: 10px 30px 10px;
+    color: rgba(0, 128, 139, 1);
+    opacity: 1;
+    transition: .4s;
+}
+
+footer ul a {
+    text-decoration: none;
+}
+
+footer ul li:hover {
+    color: aliceblue;
+}
+
+.button-footer {
+    color: aliceblue;
+    margin: 20px;
+    position: relative;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 54px;
+    padding: 0;
+    border: 3px rgba(0, 128, 139, 1) solid;
+    transition: .25s;
+}
+
+.button-footer:hover {
+    background-color: rgba(0, 128, 139, 1);
+    color: #000;
+}
